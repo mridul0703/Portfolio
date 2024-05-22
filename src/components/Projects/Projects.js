@@ -24,7 +24,7 @@ function Projects() {
               isBlog={false}
               title="Portfolio"
               description="Explore my personalized portfolio crafted with React JS, showcasing my projects, skills, and experiences. Engage with dynamic design, seamless navigation, and interactive elements, reflecting my dedication to innovation and creativity in the digital realm."
-              ghLink="https://github.com/mridul0703/porfolio"
+              ghLink="https://github.com/mridul0703/Portfolio"
               demoLink="https://mridul0703.vercel.app/"
             />
           </Col>
