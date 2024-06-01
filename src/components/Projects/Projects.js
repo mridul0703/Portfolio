@@ -6,6 +6,7 @@ import compiler from "../../Assets/Projects/codeEditor.png";
 import portfolio from "../../Assets/Projects/portfolio.png";
 import cabfare from "../../Assets/Projects/cab-fare.png";
 import ecommerce from "../../Assets/Projects/ecommerce.png";
+import weatherapp from "../../Assets?Projects?weatherapp.png";
 function Projects() {
   return (
     <Container fluid className="project-section">
