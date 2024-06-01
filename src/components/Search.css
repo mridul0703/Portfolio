@@ -1,0 +1,59 @@
+/* src/components/Search.css */
+.search-container {
+  position: relative;
+  border: none;
+}
+
+.search-input {
+  width: 30vw; /* Set the width to 30vw */
+  padding: 10px;
+  font-size: 20px;
+  color: black;
+  text-align: center; /* Center the placeholder text */
+  border-radius: 20px; /* Add a border radius of 20px */
+  border: none; /* Ensure no border is added */
+  outline: none; /* Remove default focus outline */
+}
+
+.search-input:focus {
+  border: none; /* Ensure no border is added on focus */
+  outline: none; /* Remove focus outline */
+}
+
+.search-input::placeholder {
+  text-align: center; /* Ensure the placeholder is centered */
+}
+
+.suggestions-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 30vw; /* Match the width of the input */
+  background-color: white;
+  border-radius: 20px; /* Add a border radius of 20px */
+  z-index: 1000;
+  overflow: hidden; /* Ensure border-radius is applied */
+  overflow-x: visible;
+}
+
+.suggestion-item {
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  color: black; /* Set the dropdown text color to black */
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+.suggestions-list .suggestion-item:first-child:hover {
+  border: none;
+  border-radius: 20px 20px 0 0; /* Apply border-radius to the top */
+}
+
+.suggestions-list .suggestion-item:last-child:hover {
+  border: none;
+  border-radius: 0 0 20px 20px; /* Apply border-radius to the bottom */
+}

@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+.full-weather {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-info {
+  overflow-x: hidden;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 70vw;
+  height: 65vh;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather-info button {
+  height: 40px;
+  width: 120px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.weather-info button:focus,
+.weather-info button:hover,
+.weather-info .active-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 0;
+}
+
+.weather-top {
+  background: rgba(255, 255, 255, 0.2);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 10vh;
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weatherbelow {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+}
+
+.weather-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-left-row {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.weather-left-row img {
+  height: 10vh;
+}
+
+.row1 {
+  height: 50%;
+}
+
+.row1 h2 {
+  font-size: 5rem;
+}
+.row1 p {
+  font-size: 2.5rem;
+}
+
+.row2 {
+  height: 30%;
+}
+
+.row2-main {
+  display: flex;
+}
+
+.weather-right {
+  padding-top: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.right-rows {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  height: 11%;
+}
+.right-rows h2 {
+  width: 50%;
+}
+.right-rows p {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.forecast {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.forecast-day h3 {
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 25px;
+}
+
+.forecast-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  width: 115px;
+  height: 100px;
+}
+
+.forecast-items {
+  display: flex;
+}
+
+.forecast-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.forecast-item p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

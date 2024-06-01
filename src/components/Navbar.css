@@ -1,0 +1,51 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5vw;
+  background-color: rgba(255, 255, 255, 0.1); /* Change the last value (0.8) to adjust the opacity */
+  color: #fff;
+  height: 15vh;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 7vw; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 0.5rem;
+  padding: 10px;
+}
+
+.app-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-left: 15px;
+  border-left: 2px solid #fff;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  width: 8vw;
+}
+
+.country-code {
+  margin-right: 0.5rem;
+  padding: 0 20px;
+  border-right: 1px solid #fff;
+  font-size: larger;
+}
+
+.temp-unit-select {
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: white; /* Set the text color to black */
+}
+

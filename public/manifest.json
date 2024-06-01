@@ -1,7 +1,7 @@
 {
-  "name": "Mridul M Kumar | Portfolio",
-  "short_name": "Portfolio",
-  "description": "Self Developed personal website built with React.js",
+  "name": "Mridul M Kumar | Weather App",
+  "short_name": "Weather App",
+  "description": "A responsive weather application built with React.js",
   "start_url": "https://mridul0703.vercel.app/",
   "display": "standalone",
   "background_color": "#ffffff",
