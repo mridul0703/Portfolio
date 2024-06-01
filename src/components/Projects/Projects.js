@@ -42,6 +42,17 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={weatherapp}
+              isBlog={false}
+              title="Weather App"
+              description="Welcome to the Weather App! This application allows you to search for and view weather information for any city. It displays current weather data and supports both Celsius and Fahrenheit temperature units and uses OpenWeather API to fetch the weather data."
+              ghLink="https://github.com/mridul0703/Weather-App"
+              demoLink="https://mridul-weather-app.vercel.app/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={cabfare}
               isBlog={false}
               title="Cab Fare Prediction (ML)"
