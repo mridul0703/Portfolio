@@ -1,35 +1,38 @@
-/* General styles for all devices */
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-image: url('./images/background1.png'); /* Replace with the actual path to your image */
-  background-size: cover;
-  background-position: center;
-  height: 100vh; /* Ensure the background covers the full viewport height */
-  background-attachment: fixed; /* Ensure the background remains fixed during scrolling */
+.App {
+  text-align: center;
 }
 
-/* Adjust background properties for small screens */
-@media (max-width: 600px) {
-  body {
-    background-size: cover; /* Maintain cover property for small screens */
-    background-position: center top; /* Adjust position to focus more on the top part of the image */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
 }
 
-/* Adjust background properties for medium screens */
-@media (min-width: 601px) and (max-width: 1024px) {
-  body {
-    background-size: cover; /* Maintain cover property for medium screens */
-    background-position: center center; /* Center the background image */
-  }
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-/* Adjust background properties for large screens */
-@media (min-width: 1025px) {
-  body {
-    background-size: cover; /* Maintain cover property for large screens */
-    background-position: center center; /* Center the background image */
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
