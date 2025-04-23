@@ -7,6 +7,7 @@ import portfolio from "../../Assets/Projects/portfolio.png";
 import cabfare from "../../Assets/Projects/cab-fare.png";
 import ecommerce from "../../Assets/Projects/ecommerce.png";
 import weatherapp from "../../Assets/Projects/weatherapp.png";
+import jobportal from "../../Assets/Projects/jobportal.png";
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -19,6 +20,16 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={[jobportal]}
+              isBlog={false}
+              title="Job Portal"
+              description="A full-stack Job Application Portal with React + Vite frontend and Node.js + Express + MongoDB backend. Supports Admin, Employer, and Applicant roles with role-based access and JWT authentication. Features include job posting, applications, resume previews/uploads, and a responsive UI. Built with a modular, scalable architecture using MVC and RESTful APIs for easy maintenance."
+              ghLink="https://github.com/mridul0703/Job-Application-Portal-Backend"
+              demoLink="https://jobapplicationportal.vercel.app/"
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={[portfolio]}
