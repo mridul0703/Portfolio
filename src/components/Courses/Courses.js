@@ -15,7 +15,7 @@ function Courses() {
           My <strong className="purple">Courses</strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are the courses I've completed and certifications I've earned.
+          Here are the courses I've designed for everyone.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
 
@@ -53,3 +53,4 @@ function Courses() {
 }
 
 export default Courses; 
+
