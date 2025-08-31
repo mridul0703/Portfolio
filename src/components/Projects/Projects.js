@@ -32,17 +32,6 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={[portfolio]}
-              isBlog={false}
-              title="Portfolio"
-              description="Explore my personalized portfolio crafted with React JS, showcasing my projects, skills, and experiences. Engage with dynamic design, seamless navigation, and interactive elements, reflecting my dedication to innovation and creativity in the digital realm."
-              ghLink="https://github.com/mridul0703/Portfolio"
-              demoLink="https://mridul0703.vercel.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
               imgPath={ecommerce}
               isBlog={false}
               title="Ecommerce Website"
@@ -51,7 +40,16 @@ function Projects() {
               demoLink="https://mridul0703.github.io/Cara-An-ecommerce-website/"
             />
           </Col>
-
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={[portfolio]}
+              isBlog={false}
+              title="Portfolio"
+              description="Explore my personalized portfolio crafted with React JS, showcasing my projects, skills, and experiences. Engage with dynamic design, seamless navigation, and interactive elements, reflecting my dedication to innovation and creativity in the digital realm."
+              ghLink="https://github.com/mridul0703/Portfolio"
+              demoLink="https://mridul0703.vercel.app/"
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={weatherapp}
