@@ -1,51 +1,80 @@
-import React, { useState, useEffect } from "react";
-import Preloader from "../src/components/Pre";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
-import Courses from "./components/Courses/Courses";
-import Footer from "./components/Footer";
-import Resume from "./components/Resume/ResumeNew";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate
-} from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
-import "./style.css";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useEffect, useState } from 'react';
+import Navbar from './components/Navbar';
+import WeatherInfo from './components/WeatherInfo';
+import UserLocationWeather from './components/UserLocationWeather';
+import axios from 'axios';
+import './App.css';
+
+const API_KEY = '1fb9b7430ade9dc72614f3f70d323ea3'; // Replace with your OpenWeather API key
 
 function App() {
-  const [load, upadateLoad] = useState(true);
+  const [userLocationWeather, setUserLocationWeather] = useState(null);
+  const [currentWeather, setCurrentWeather] = useState(null);
+  const [forecastData, setForecastData] = useState(null);
+  const [tempUnit, setTempUnit] = useState('celsius'); // State to hold temperature unit
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      upadateLoad(false);
-    }, 1200);
-
-    return () => clearTimeout(timer);
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          fetchUserLocationWeather(latitude, longitude);
+          fetchForecastData(latitude, longitude);
+        },
+        (error) => {
+          console.error('Error fetching user location:', error);
+        }
+      );
+    } else {
+      console.error('Geolocation is not supported by this browser.');
+    }
   }, []);
 
+  const fetchUserLocationWeather = async (latitude, longitude) => {
+    try {
+      const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`);
+      setUserLocationWeather(response.data);
+      setCurrentWeather(response.data); // Set initial weather data to user's location
+    } catch (error) {
+      console.error('Error fetching user location weather data:', error);
+    }
+  };
+
+  const fetchWeatherData = async (latitude, longitude) => {
+    try {
+      const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`);
+      setCurrentWeather(response.data);
+    } catch (error) {
+      console.error('Error fetching weather data:', error);
+    }
+  };
+
+  const fetchForecastData = async (latitude, longitude) => {
+    try {
+      const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`);
+      setForecastData(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.error('Error fetching forecast data:', error);
+    }
+  };
+
+  const handleWeatherData = (city) => {
+    const { lat, lon } = city;
+    fetchWeatherData(lat, lon);
+    fetchForecastData(lat, lon);
+  };
+
+  const handleTempUnitChange = (unit) => {
+    setTempUnit(unit);
+  };
+
   return (
-    <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <Navbar />
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/"/>} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <div className="App">
+      <Navbar initialWeatherData={currentWeather} onCitySelect={handleWeatherData} onTempUnitChange={handleTempUnitChange} />
+      <UserLocationWeather weatherData={userLocationWeather} tempUnit={tempUnit} />
+      {currentWeather && <WeatherInfo weatherData={currentWeather} forecastData={forecastData} tempUnit={tempUnit} />}
+    </div>
   );
 }
 

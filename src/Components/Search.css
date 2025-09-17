@@ -1,0 +1,118 @@
+/* src/components/Search.css */
+.search-container {
+  position: relative;
+  border: none;
+}
+
+.search-input {
+  width: 30vw;
+  min-width: 250px;
+  padding: 12px 20px;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  outline: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.search-input:focus {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.search-input::placeholder {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+.suggestions-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 30vw;
+  min-width: 250px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  z-index: 1000;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  top: 100%;
+  margin-top: 5px;
+}
+
+.suggestion-item {
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.suggestion-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestions-list .suggestion-item:first-child {
+  border-radius: 20px 20px 0 0;
+}
+
+.suggestions-list .suggestion-item:last-child {
+  border-radius: 0 0 20px 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-input {
+    width: 40vw;
+    min-width: 200px;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+  
+  .suggestions-list {
+    width: 40vw;
+    min-width: 200px;
+  }
+  
+  .suggestion-item {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-input {
+    width: 50vw;
+    min-width: 180px;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+  
+  .suggestions-list {
+    width: 50vw;
+    min-width: 180px;
+  }
+  
+  .suggestion-item {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}

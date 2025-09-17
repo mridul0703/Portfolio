@@ -1,0 +1,22 @@
+/* src/components/UserLocationWeather.css */
+.user-location-weather {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 12vh;
+	width: 100vw;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	color: white;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-location-weather h2 {
+	font-size: 1.8rem;
+	font-weight: 600;
+	text-align: center;
+	margin: 0;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	letter-spacing: 0.5px;
+}

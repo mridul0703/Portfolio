@@ -1,0 +1,393 @@
+
+*,
+*::before,
+*::after {
+  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+  /* -------------------------------------------------Navbar.js----------------------------------------------- */
+.navbar {
+    width: 100vw;
+    height: 15vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.left h1{
+    color: white;
+    font-weight: 400;
+    font-size:xx-large;
+    border-left: 2px solid white;
+    padding-left : 20px;
+}
+
+.navbar .left img {
+    padding: 0 20px;
+    height: 4vh;
+}
+
+.navbar input {
+    height : 6vh;
+    width: 25vw;
+    border-radius: 25px;
+    border: 0;
+    background-color: rgba(255,255, 255, 0.2);
+    font-size: large;
+    text-align: center;
+}
+
+.navbar input::placeholder {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;  
+}
+
+.navbar .right {
+  margin:0 5vw;
+}
+
+
+.region{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.regionarea {
+  color: white;
+  opacity: 0.8;
+  padding : 0 15px 0 10px;
+  font-size: 25px;
+}
+
+.tempunit{
+  color: white;
+  opacity: 0.8;
+  border-left: 2px solid white;
+  padding : 0 30px 0 15px;
+  font-size: 25px;
+}
+
+.navbar .right img {
+  height : 30px;
+}
+
+
+/* HamburgerButton.css */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: white;
+  }
+  
+  .hamburger .line {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+  }
+  
+  .hamburger.open .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  
+  .hamburger.open .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+  
+
+/* -------------------------------------------------Navigation.js----------------------------------------------- */
+
+
+.currstat{
+  height : 8.5vh;
+  width: 100vw;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0 8px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.cstate {
+  display: flex;
+  height: 100%;
+  width: 30vw;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  color: white !important;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+} 
+
+
+.stat{
+  height : 8.5vh;
+  width: 100vw;
+  padding: 0 20vw 0 10vw;
+  text-align: left;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1)
+}
+
+
+.stat a {
+  display: inline-flex;
+  height:6vh;
+  width: 10vw;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+
+}
+
+.stat a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  color: white;
+}
+
+
+/* -----------------------------------------------------------Weather Body---------------------------------------------- */
+
+
+.weatherbody{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.leftcol{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 0 0 ;
+}
+
+.rightcol{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 0 0;
+}
+
+.lcard {
+  height: 10vh;
+  width: 50vw;
+  background-color: white;
+  
+}
+
+.rcard {
+  height: 60vh;
+  width: 30vw;
+  background-image: url(../src/Img/city1.png);
+}
+
+.lno1 {
+  background-image: url(../src/Img/image.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.lno2 {
+  background-image: url(../src/Img/weather.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.maincard {
+  display: flex;
+  height: 25%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: larger;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.maincard2 { 
+  display: flex;
+  height: 18%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: large;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.maincard3 { 
+  display: flex;
+  height: 15%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: larger;
+  align-items: center;
+  padding-left: 20px;
+}
+
+
+.pricard1{
+  display: flex;
+  height: 75%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pricard1 img {
+  height: 50%;
+  padding-right: 4%;
+}
+
+.primaryone{
+  padding-left: 2%;
+  width: 70%;
+}
+
+.primaryone h1 {
+  margin-top: -20px;
+  font-size: 90px;
+  color: white;
+}
+.primaryone p {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+}
+
+
+
+.pricard2 {
+  height: 68%;
+}
+
+.rows2 {
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  height: 25%;
+  color: white;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.rows2 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  width: 20%;
+}
+
+.rows2 p {
+  font-size: x-large;
+  font-weight: 600;
+  
+}
+
+.rows2 img {
+  height: 50px;
+}
+.bottomcard {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottomcard button {
+  height: 6vh;
+  width: 30%;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+
+}
+
+
+.sun{
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  height: 10%;
+}
+
+.sun-row {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.sec-card3
+{
+  color: white;
+  font-weight: 700;
+  font-size: medium;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px ;
+  height: 70%;
+  width: 100%;
+  justify-content: space-around;
+  
+}
+
+.card3-rows {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 10%;
+}
+
+.card3-mid-row{
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
