@@ -1,0 +1,17 @@
+/* src/components/UserLocationWeather.css */
+.user-location-weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.15); /* Adjust opacity as needed */
+  color: #333; /* Text color */
+}
+
+.user-location-weather h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+}
