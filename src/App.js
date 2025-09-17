@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from './Components/Navbar';
+import Navbar from './Components/navbar';
 import WeatherInfo from './Components/WeatherInfo';
 import UserLocationWeather from './Components/UserLocationWeather';
 import axios from 'axios';
