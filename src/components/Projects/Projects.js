@@ -22,7 +22,7 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={[jobportal]}
+              imgPath={jobportal}
               isBlog={false}
               title="Job Portal"
               description="A full-stack Job Application Portal with React + Vite frontend and Node.js + Express + MongoDB backend. Supports Admin, Employer, and Applicant roles with role-based access and JWT authentication. Features include job posting, applications, resume previews/uploads, and a responsive UI. Built with a modular, scalable architecture using MVC and RESTful APIs for easy maintenance."
@@ -42,7 +42,7 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={[portfolio]}
+              imgPath={portfolio}
               isBlog={false}
               title="Portfolio"
               description="Explore my personalized portfolio crafted with React JS, showcasing my projects, skills, and experiences. Engage with dynamic design, seamless navigation, and interactive elements, reflecting my dedication to innovation and creativity in the digital realm."
