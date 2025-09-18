@@ -5,6 +5,7 @@ import Particle from "../Particle";
 import compiler from "../../Assets/Projects/codeEditor.png";
 import portfolio from "../../Assets/Projects/portfolio.png";
 import cabfare from "../../Assets/Projects/cab-fare.png";
+import plantDisease from "../../Assets/Projects/plantDisease.png";
 import ecommerce from "../../Assets/Projects/ecommerce.png";
 import weatherapp from "../../Assets/Projects/weatherapp.png";
 import jobportal from "../../Assets/Projects/jobportal.png";
@@ -60,7 +61,15 @@ function Projects() {
               demoLink="https://mridul-weather-app.vercel.app/"
             />
           </Col>
-
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={plantDisease}
+              isBlog={false}
+              title="Plant Disease Detection Model using CNN (ML)"
+              description="The Plant Disease Prediction Model is a deep learning project for plant disease detection. It uses CNN/Transfer Learning with image preprocessing, augmentation, and evaluation through accuracy/loss metrics. The model was trained and tested on leaf image datasets to ensure reliable performance."
+              ghLink="https://github.com/mridul0703/Plant-Disease-Prediction-Model"
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={cabfare}
