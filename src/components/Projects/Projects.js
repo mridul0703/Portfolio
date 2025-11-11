@@ -9,6 +9,7 @@ import plantDisease from "../../Assets/Projects/plantDisease.png";
 import ecommerce from "../../Assets/Projects/ecommerce.png";
 import weatherapp from "../../Assets/Projects/weatherapp.png";
 import jobportal from "../../Assets/Projects/jobportal.png";
+import devops_vm from "../../Assets?Projects/devops_vm.png";
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -49,6 +50,15 @@ function Projects() {
               description="Explore my personalized portfolio crafted with React JS, showcasing my projects, skills, and experiences. Engage with dynamic design, seamless navigation, and interactive elements, reflecting my dedication to innovation and creativity in the digital realm."
               ghLink="https://github.com/mridul0703/Portfolio"
               demoLink="https://mridul0703.vercel.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={devops_vm}
+              isBlog={false}
+              title="Virtual Machine (Azure)"
+              description="This repository walks you through a practical, end-to-end workflow: set up your environment, provision Azure infrastructure with Terraform, configure with Ansible, automate deploy/teardown with scripts, and optionally bake a reusable image with Packer."
+              ghLink="https://github.com/mridul0703/DevOps"
             />
           </Col>
           <Col md={4} className="project-card">
