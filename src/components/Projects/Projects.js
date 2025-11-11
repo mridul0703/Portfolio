@@ -9,7 +9,7 @@ import plantDisease from "../../Assets/Projects/plantDisease.png";
 import ecommerce from "../../Assets/Projects/ecommerce.png";
 import weatherapp from "../../Assets/Projects/weatherapp.png";
 import jobportal from "../../Assets/Projects/jobportal.png";
-import devops_vm from "../../Assets?Projects/devops_vm.png";
+import devops_vm from "../../Assets/Projects/devops_vm.png";
 function Projects() {
   return (
     <Container fluid className="project-section">
