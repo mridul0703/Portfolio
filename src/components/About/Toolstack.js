@@ -2,8 +2,6 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import {
   SiVisualstudiocode,
-  SiPostman,
-  SiSlack,
   SiVercel,
   SiGooglecloud,
 } from "react-icons/si";
