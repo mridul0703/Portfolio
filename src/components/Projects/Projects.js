@@ -52,7 +52,6 @@ function Projects() {
               demoLink="https://mridul0703.vercel.app/"
             />
           </Col>
-          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={plantDisease}
@@ -62,10 +61,6 @@ function Projects() {
               ghLink="https://github.com/mridul0703/Plant-Disease-Prediction-Model"
             />
           </Col>
-
-          
-
-          
         </Row>
       </Container>
     </Container>
