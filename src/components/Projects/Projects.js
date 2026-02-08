@@ -52,24 +52,6 @@ function Projects() {
               demoLink="https://mridul0703.vercel.app/"
             />
           </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={devops_vm}
-              isBlog={false}
-              title="Virtual Machine (Azure)"
-              description="This repository walks you through a practical, end-to-end workflow: set up your environment, provision Azure infrastructure with Terraform, configure with Ansible, automate deploy/teardown with scripts, and optionally bake a reusable image with Packer."
-              ghLink="https://github.com/mridul0703/DevOps"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={weatherapp}
-              isBlog={false}
-              title="Weather App"
-              description="Welcome to the Weather App! This application allows you to search for and view weather information for any city. It displays current weather data and supports both Celsius and Fahrenheit temperature units and uses OpenWeather API to fetch the weather data."
-              ghLink="https://github.com/mridul0703/Weather-App"
-              demoLink="https://mridul-weather-app.vercel.app/"
-            />
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
@@ -78,26 +60,6 @@ function Projects() {
               title="Plant Disease Detection Model using CNN (ML)"
               description="The Plant Disease Prediction Model is a deep learning project for plant disease detection. It uses CNN/Transfer Learning with image preprocessing, augmentation, and evaluation through accuracy/loss metrics. The model was trained and tested on leaf image datasets to ensure reliable performance."
               ghLink="https://github.com/mridul0703/Plant-Disease-Prediction-Model"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={cabfare}
-              isBlog={false}
-              title="Cab Fare Prediction (ML)"
-              description="This machine learning project focuses on building and evaluating predictive models for cab fare prediction. We perform extensive data processing, cleaning, and feature extraction to prepare the dataset for model training. This project aims to predict cab fares accurately based on various input parameters such as location, no. of passengers and time."
-              ghLink="https://github.com/mridul0703/Cab-fare-Prediction"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={compiler}
-              isBlog={false}
-              title="Web Assmbly Compiler"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/mridul0703/Web-Assembly-Compiler"
-                            
             />
           </Col>
 
